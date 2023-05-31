@@ -1,0 +1,34 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        BornerEntier();
+    }
+
+    static void BornerEntier()
+    {
+        Console.Write("Limite inf: ");
+        int limiteInf = int.Parse(Console.ReadLine());
+        
+        Console.Write("Limite sup: ");
+        int limiteSup = int.Parse(Console.ReadLine());
+        
+        Console.Write("Entier borner: ");
+        int entier = int.Parse(Console.ReadLine());
+
+        if (entier < limiteInf)
+        {
+            Console.WriteLine($"entré {entier} qui est inf à {limiteInf} qui est le mini");
+            entier = limiteInf;
+        }
+        else if (entier > limiteSup)
+        {
+            Console.WriteLine($"Vous avez entré {entier} qui est supérieur à {limiteSup} qui est le maximum");
+            entier = limiteSup;
+        }
+
+        Console.WriteLine($"résul: {entier}");
+    }
+}
